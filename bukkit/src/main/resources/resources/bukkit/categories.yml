@@ -10,30 +10,23 @@
 #  If a quest does not have a category, it will not be shown.
 # -----------------------------------------------------------
 categories:
-  examples:
+  デイリークエスト:
     display:
-      name: "&cExample Quests"
+      name: "&cデイリークエスト"
       lore:
-        - "&7This category contains example quests"
-        - "&7which are commented in the config."
-        - "&7The comments should guide you with"
-        - "&7how the config works."
-        - ""
-        - "&cIt is highly recommended you read this"
-        - "&csection and all the comments so you can"
-        - "&cmake the most of this plugin."
-      type: "WATER_BUCKET"
-  permissionexample:
+        - "&7１日１回、受ける事のできるデイリークエスト"
+      type: "BUCKET"
+
+  # 繰り返しクエスト:
+  #   display:
+  #     name: "&c繰り返しクエスト"
+  #     lore:
+  #       - "&7１日に何度も受ける事のできるデイリークエスト"
+  #     type: "WATER_BUCKET"
+
+  通常クエスト:
     display:
-      name: "&cPermission Example"
+      name: "&c通常クエスト"
       lore:
-        - "&7This category is an example of one which"
-        - "&7requires a permission to open."
-        - ""
-        - "&cIt is highly recommended you read this"
-        - "&csection and all the comments so you can"
-        - "&cmake the most of this plugin."
-      type: "WATER_BUCKET"
-    # This category needs the permission "quests.category.permissionexample", because the category ID is 'permissionexample'.
-    # The permission for other categories is: "quests.category.<id>".
-    permission-required: true
+        - "&7完了するともう１度受けれない通常クエスト"
+      type: "LAVA_BUCKET"
