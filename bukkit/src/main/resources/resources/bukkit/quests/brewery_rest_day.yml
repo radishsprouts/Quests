@@ -1,0 +1,33 @@
+tasks:
+  reach:
+    type: "placeholderapi_evaluate"
+    placeholder: "%brewery_rest_day%"
+    operator: "GREATER_THAN_OR_EQUAL_TO"
+    evaluates: "1"
+    refresh-ticks: 100
+display:
+  name: "&c休肝日"
+  lore-normal:
+    - "&cお酒を飲まずに休肝日を過ごしてください。"
+    - "&7条件を満たすと自動的に完了します。"
+    - ""
+    - "&7現在: &f%brewery_rest_day%&7 / 1 日"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f%brewery_rest_day%&7 / 1 日"
+  type: "MILK_BUCKET"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} brewery_rest_day"
+placeholders:
+  description: "&7休肝日"
+  progress: " &8- &7進行中"
+progress-placeholders:
+  '*': "&f%brewery_rest_day%&7 / 1 日"
+options:
+  category: "通常クエスト"
+  repeatable: false
