@@ -1,0 +1,35 @@
+tasks:
+  reach:
+    type: "placeholderapi_evaluate"
+    placeholder: "%kadocasino_play_total%"
+    operator: "GREATER_THAN_OR_EQUAL_TO"
+    evaluates: "1000"
+    refresh-ticks: 100
+display:
+  name: "&cカジノゲームを1000回プレイする"
+  lore-normal:
+    - "&cカジノのゲームを通算1000回プレイしてください。"
+    - "&7条件を満たすと自動的に完了します。"
+    - ""
+    - "&7現在: &f%kadocasino_play_total%&7 / 1000 回"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f%kadocasino_play_total%&7 / 1000 回"
+  type: "GOLD_INGOT"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} casino_play4"
+placeholders:
+  description: "&7カジノゲームを1000回プレイする"
+  progress: " &8- &7進行中"
+progress-placeholders:
+  '*': "&f%kadocasino_play_total%&7 / 1000 回"
+options:
+  category: "通常クエスト"
+  requires:
+    - "casino_play3"
+  repeatable: false

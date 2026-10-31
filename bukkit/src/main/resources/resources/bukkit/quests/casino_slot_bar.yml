@@ -1,0 +1,33 @@
+tasks:
+  reach:
+    type: "placeholderapi_evaluate"
+    placeholder: "%kadocasino_slot_bar%"
+    operator: "GREATER_THAN_OR_EQUAL_TO"
+    evaluates: "1"
+    refresh-ticks: 100
+display:
+  name: "&c金塊ラッシュ"
+  lore-normal:
+    - "&cスロットでBAR絵柄を揃えてください。"
+    - "&7条件を満たすと自動的に完了します。"
+    - ""
+    - "&7現在: &f%kadocasino_slot_bar%&7 / 1 回"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f%kadocasino_slot_bar%&7 / 1 回"
+  type: "IRON_BLOCK"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} casino_slot_bar"
+placeholders:
+  description: "&7金塊ラッシュ"
+  progress: " &8- &7進行中"
+progress-placeholders:
+  '*': "&f%kadocasino_slot_bar%&7 / 1 回"
+options:
+  category: "通常クエスト"
+  repeatable: false
