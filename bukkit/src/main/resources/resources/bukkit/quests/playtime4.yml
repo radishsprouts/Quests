@@ -1,0 +1,31 @@
+tasks:
+  playtime:
+    type: "playtime"
+    minutes: 150000
+    ignore-afk: true
+display:
+  name: "&cプレイ時間2500時間"
+  lore-normal:
+    - "&cプレイ時間2500時間達成してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f20000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{playtime:progress}&7/2500 時間完了"
+  type: "CLOCK"
+rewards:
+  - "eco give {player} 20000"
+  - "titlegrant {player} playtime4"
+placeholders:
+  description: "&7プレイ時間&f2500時間&7達成する"
+  progress: " &8- &f{playtime:progress}&7/2500 時間完了"
+progress-placeholders:
+  '*': "&f{playtime:progress}&7/2500 時間完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "playtime3"
+  repeatable: false
+

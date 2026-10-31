@@ -1,0 +1,28 @@
+tasks:
+  projectilelaunching:
+    type: "projectilelaunching"
+    amount: 5000
+    projectile: 'ARROW'
+display:
+  name: "&c矢を5000本撃つ"
+  lore-normal:
+    - "&c矢を5000本撃ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{projectilelaunching:progress}&7/5000 本発射完了"
+  type: "BOW"
+rewards:
+  - "eco give {player} 500"
+  - "titlegrant {player} arrow"
+placeholders:
+  description: "&7矢を&f5000本&7撃つ"
+  progress: " &8- &f{projectilelaunching:progress}&7/5000 本発射完了"
+progress-placeholders:
+  '*': "&f{projectilelaunching:progress}&7/5000 本発射完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

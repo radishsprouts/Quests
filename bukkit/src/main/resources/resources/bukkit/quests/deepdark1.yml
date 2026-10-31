@@ -1,0 +1,33 @@
+tasks:
+  blockbreak:
+    type: "blockbreak"
+    amount: 100
+    block:
+      - SCULK
+      - SCULK_VEIN
+      - SCULK_CATALYST
+      - SCULK_SENSOR
+      - SCULK_SHRIEKER
+display:
+  name: "&cスカルク系ブロックを100個破壊"
+  lore-normal:
+    - "&cスカルク系ブロックを100個破壊してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockbreak:progress}&7/100 ブロック完了"
+  type: "SCULK"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} deepdark1"
+placeholders:
+  description: "&7スカルク系ブロックを&f100個&7破壊する"
+  progress: " &8- &f{blockbreak:progress}&7/100 ブロック完了"
+progress-placeholders:
+  '*': "&f{blockbreak:progress}&7/100 ブロック完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

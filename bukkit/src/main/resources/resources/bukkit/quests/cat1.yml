@@ -1,0 +1,29 @@
+tasks:
+  taming:
+    type: "taming"
+    amount: 1
+    mob: CAT
+display:
+  name: "&cねこを1匹手懐ける"
+  lore-normal:
+    - "&cねこを1匹手懐けてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{taming:progress}&7/1 匹テイム完了"
+  type: "COD"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} cat1"
+placeholders:
+  description: "&7ねこを&f1匹&7テイムする"
+  progress: " &8- &f{taming:progress}&7/1 匹テイム完了"
+progress-placeholders:
+  '*': "&f{taming:progress}&7/1 匹テイム完了"
+options:
+  category: "通常クエスト"
+  repeatable: false
+

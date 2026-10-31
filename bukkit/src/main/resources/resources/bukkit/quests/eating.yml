@@ -1,0 +1,68 @@
+tasks:
+  eating:
+    type: "consume"
+    amount: 8
+    items:
+    - APPLE
+    - BAKED_POTATO
+    - BEETROOT
+    - BEETROOT_SOUP
+    - BREAD
+    - CARROT
+    - CHORUS_FRUIT
+    - COOKED_BEEF
+    - COOKED_CHICKEN
+    - COOKED_COD
+    - COOKED_MUTTON
+    - COOKED_PORKCHOP
+    - COOKED_RABBIT
+    - COOKED_SALMON
+    - DRIED_KELP
+    - ENCHANTED_GOLDEN_APPLE
+    - GLOW_BERRIES
+    - GOLDEN_APPLE
+    - GOLDEN_CARROT
+    - HONEY_BOTTLE
+    - MELON_SLICE
+    - MUSHROOM_STEW
+    - POISONOUS_POTATO
+    - PUFFERFISH 
+    - RABBIT_STEW
+    - RAW_BEEF
+    - RAW_CHICKEN
+    - RAW_COD
+    - RAW_MUTTON
+    - RAW_PORKCHOP
+    - RAW_RABBIT
+    - RAW_SALMON
+    - ROTTEN_FLESH
+    - SPIDER_EYE
+    - SUSPICIOUS_STEW
+    - SWEET_BERRIES
+    - TROPICAL_FISH
+display:
+  name: "&c任意の食べ物を8回食べる"
+  lore-normal:
+    - "&c任意の食べ物を8回食べてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{eating:progress}&7/8 回食事完了"
+  type: "APPLE"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7任意の食べ物を&f8個&7食べる"
+  progress: " &8- &f{eating:progress}&7/8 回食事完了"
+progress-placeholders:
+  '*': "&f{eating:progress}&7/8 回食事完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

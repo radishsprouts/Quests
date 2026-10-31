@@ -1,0 +1,32 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 1
+    hostile: true
+    mob: WARDEN
+display:
+  name: "&cウォーデンを1体倒す"
+  lore-normal:
+    - "&cウォーデンを1体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f2000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/1 討伐完了"
+  type: "IRON_SWORD"
+rewards:
+  - "eco give {player} 2000"
+  - "titlegrant {player} warden"
+  - "say {player}がウォーデンを討伐しました。"
+  - "sendwebhook クエスト完了 {player}がウォーデンを討伐しました。 007FFF"
+placeholders:
+  description: "&7ウォーデンを&f1体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/1 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/1 討伐完了"
+options:
+  category: "通常クエスト"
+  repeatable: false
+

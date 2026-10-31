@@ -1,0 +1,35 @@
+tasks:
+  reach:
+    type: "placeholderapi_evaluate"
+    placeholder: "%kadorecipe_cook_cat_sweets%"
+    operator: "GREATER_THAN_OR_EQUAL_TO"
+    evaluates: "5000"
+    refresh-ticks: 100
+display:
+  name: "&c甘味を5000品作る"
+  lore-normal:
+    - "&cカテゴリー「甘味」の料理を通算5000品作ってください。"
+    - "&7条件を満たすと自動的に完了します。"
+    - ""
+    - "&7現在: &f%kadorecipe_cook_cat_sweets%&7 / 5000 品"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f%kadorecipe_cook_cat_sweets%&7 / 5000 品"
+  type: "SUGAR"
+rewards:
+  - "eco give {player} 1500"
+  - "titlegrant {player} sweets4"
+placeholders:
+  description: "&7甘味を5000品作る"
+  progress: " &8- &f/kadorecipe stats &7で作った品数を確認"
+progress-placeholders:
+  '*': "&f/kadorecipe stats &7で作った品数を確認"
+options:
+  category: "通常クエスト"
+  requires:
+    - "sweets3"
+  repeatable: false

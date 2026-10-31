@@ -1,0 +1,27 @@
+tasks:
+  trading:
+    type: "trading"
+    amount: 50
+display:
+  name: "&c村人と50回取引する"
+  lore-normal:
+    - "&c村人と50回取引してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{trading:progress}&7/50 回取引完了"
+  type: "EMERALD"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} trade1"
+placeholders:
+  description: "&7村人と&f50回&7取引する"
+  progress: " &8- &f{trading:progress}&7/50 回取引完了"
+progress-placeholders:
+  '*': "&f{trading:progress}&7/50 回取引完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

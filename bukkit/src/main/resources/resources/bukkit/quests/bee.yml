@@ -1,0 +1,29 @@
+tasks:
+  breeding:
+    type: "breeding"
+    amount: 50
+    mobs:
+    - BEE
+display:
+  name: "&cミツバチを50匹繁殖させる"
+  lore-normal:
+    - "&cミツバチを50匹繁殖させてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{breeding:progress}&7/50 匹繁殖完了"
+  type: "HONEYCOMB"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} bee"
+placeholders:
+  description: "&7ミツバチを&f50匹&7繁殖させる"
+  progress: " &8- &f{breeding:progress}&7/50 匹繁殖完了"
+progress-placeholders:
+  '*': "&f{breeding:progress}&7/50 匹繁殖完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

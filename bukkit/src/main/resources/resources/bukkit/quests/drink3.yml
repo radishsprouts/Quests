@@ -1,0 +1,35 @@
+tasks:
+  reach:
+    type: "placeholderapi_evaluate"
+    placeholder: "%kadorecipe_cook_cat_drink%"
+    operator: "GREATER_THAN_OR_EQUAL_TO"
+    evaluates: "1000"
+    refresh-ticks: 100
+display:
+  name: "&c飲み物を1000品作る"
+  lore-normal:
+    - "&cカテゴリー「飲み物」の料理を通算1000品作ってください。"
+    - "&7条件を満たすと自動的に完了します。"
+    - ""
+    - "&7現在: &f%kadorecipe_cook_cat_drink%&7 / 1000 品"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f%kadorecipe_cook_cat_drink%&7 / 1000 品"
+  type: "GLASS_BOTTLE"
+rewards:
+  - "eco give {player} 500"
+  - "titlegrant {player} drink3"
+placeholders:
+  description: "&7飲み物を1000品作る"
+  progress: " &8- &f/kadorecipe stats &7で作った品数を確認"
+progress-placeholders:
+  '*': "&f/kadorecipe stats &7で作った品数を確認"
+options:
+  category: "通常クエスト"
+  requires:
+    - "drink2"
+  repeatable: false

@@ -1,0 +1,29 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 50
+    hostile: true
+    mob: SKELETON
+display:
+  name: "&cスケルトンを50体倒す"
+  lore-normal:
+    - "&cスケルトンを50体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/50 討伐完了"
+  type: "BONE"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} skeleton1"
+placeholders:
+  description: "&7スケルトンを&f50体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/50 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/50 討伐完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

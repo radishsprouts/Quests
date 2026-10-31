@@ -1,0 +1,27 @@
+tasks:
+  bartering:
+    type: "bartering"
+    amount: 100
+display:
+  name: "&cピグリンと100回物々交換する"
+  lore-normal:
+    - "&c金インゴットを投げてピグリンと100回物々交換してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{bartering:progress}&7/100 回取引完了"
+  type: "GOLD_INGOT"
+rewards:
+  - "eco give {player} 500"
+  - "titlegrant {player} barter"
+placeholders:
+  description: "&7ピグリンと&f100回&7物々交換する"
+  progress: " &8- &f{bartering:progress}&7/100 回取引完了"
+progress-placeholders:
+  '*': "&f{bartering:progress}&7/100 回取引完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

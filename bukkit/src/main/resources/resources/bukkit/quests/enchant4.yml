@@ -1,0 +1,29 @@
+tasks:
+  enchanting:
+    type: "enchanting"
+    amount: 1500
+display:
+  name: "&cアイテムを1500個エンチャントする"
+  lore-normal:
+    - "&cアイテムを1500個エンチャントしてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{enchanting:progress}&7/1500 個エンチャント完了"
+  type: "ENCHANTING_TABLE"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} enchant4"
+placeholders:
+  description: "&7アイテムを&f1500個&7エンチャントする"
+  progress: " &8- &f{enchanting:progress}&7/1500 個エンチャント完了"
+progress-placeholders:
+  '*': "&f{enchanting:progress}&7/1500 個エンチャント完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "enchant3"
+  repeatable: false

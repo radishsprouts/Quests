@@ -1,0 +1,32 @@
+tasks:
+  breeding:
+    type: "breeding"
+    amount: 30
+    mobs:
+    - CHICKEN
+display:
+  name: "&cニワトリを30匹飼育する"
+  lore-normal:
+    - "&cニワトリを30匹飼育してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{breeding:progress}&7/30 匹飼育完了"
+  type: "WHEAT_SEEDS"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7ニワトリを&f30匹&7飼育する"
+  progress: " &8- &f{breeding:progress}&7/30 匹飼育完了"
+progress-placeholders:
+  '*': "&f{breeding:progress}&7/30 匹飼育完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

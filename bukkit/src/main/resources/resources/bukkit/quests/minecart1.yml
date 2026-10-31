@@ -1,0 +1,29 @@
+tasks:
+  running:
+    type: "walking"
+    distance: 10000
+    mode: minecart
+display:
+  name: "&c10000ブロックトロッコで移動"
+  lore-normal:
+    - "&c10000ブロックトロッコで移動してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{running:progress}&7/10000 トロッコ移動完了"
+  type: "MINECART"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} minecart1"
+placeholders:
+  description: "&f10000ブロック&7トロッコで移動"
+  progress: " &8- &f{running:progress}&7/10000 トロッコ移動完了"
+progress-placeholders:
+  '*': "&f{running:progress}&7/10000 トロッコ移動完了"
+options:
+  category: "通常クエスト"
+  repeatable: false
+

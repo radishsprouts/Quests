@@ -1,0 +1,33 @@
+tasks:
+  breeding:
+    type: "breeding"
+    amount: 15
+    mobs:
+    - COW
+    - MOOSHROOM 
+display:
+  name: "&c牛を15匹飼育する"
+  lore-normal:
+    - "&c牛を15匹飼育してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{breeding:progress}&7/15 匹飼育完了"
+  type: "WHEAT"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7牛を&f15匹&7飼育する"
+  progress: " &8- &f{breeding:progress}&7/15 匹飼育完了"
+progress-placeholders:
+  '*': "&f{breeding:progress}&7/15 匹飼育完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

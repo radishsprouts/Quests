@@ -1,0 +1,31 @@
+tasks:
+  blockbreak:
+    type: "blockbreak"
+    amount: 768
+    block:
+      - ANCIENT_DEBRIS
+display:
+  name: "&c古代の残骸を768個採掘"
+  lore-normal:
+    - "&c古代の残骸を768個採掘してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f30000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockbreak:progress}&7/768 ブロック完了"
+  type: "NETHERITE_INGOT"
+rewards:
+  - "eco give {player} 30000"
+  - "titlegrant {player} netherite4"
+placeholders:
+  description: "&7古代の残骸を&f768個&7採掘する"
+  progress: " &8- &f{blockbreak:progress}&7/768 ブロック完了"
+progress-placeholders:
+  '*': "&f{blockbreak:progress}&7/768 ブロック完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "netherite3"
+  repeatable: false

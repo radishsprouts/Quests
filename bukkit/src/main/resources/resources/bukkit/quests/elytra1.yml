@@ -1,0 +1,28 @@
+tasks:
+  walking:
+    type: "walking"
+    distance: 10000
+    mode: elytra
+display:
+  name: "&c10000ブロックエリトラで滑空"
+  lore-normal:
+    - "&c10000ブロックエリトラで滑空してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{walking:progress}&7/10000 エリトラで滑空完了"
+  type: "ELYTRA"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} elytra1"
+placeholders:
+  description: "&f10000ブロック&7エリトラで滑空"
+  progress: " &8- &f{walking:progress}&7/10000 エリトラで滑空完了"
+progress-placeholders:
+  '*': "&f{walking:progress}&7/10000 エリトラで滑空完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

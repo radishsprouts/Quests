@@ -1,0 +1,27 @@
+tasks:
+  resurrecting:
+    type: "resurrecting"
+    amount: 5
+display:
+  name: "&c不死のトーテムで5回復活する"
+  lore-normal:
+    - "&c不死のトーテムで5回復活してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{resurrecting:progress}&7/5 回復活完了"
+  type: "TOTEM_OF_UNDYING"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} totem"
+placeholders:
+  description: "&7不死のトーテムで&f5回&7復活する"
+  progress: " &8- &f{resurrecting:progress}&7/5 回復活完了"
+progress-placeholders:
+  '*': "&f{resurrecting:progress}&7/5 回復活完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

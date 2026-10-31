@@ -1,0 +1,33 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 6000
+    hostile: true
+    mobs:
+    - SPIDER
+    - CAVE_SPIDER
+display:
+  name: "&cクモを6000体倒す"
+  lore-normal:
+    - "&cクモを6000体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/6000 討伐完了"
+  type: "STRING"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} spider4"
+placeholders:
+  description: "&7クモを&f6000体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/6000 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/6000 討伐完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "spider3"
+  repeatable: false

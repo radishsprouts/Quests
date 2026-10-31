@@ -1,0 +1,30 @@
+tasks:
+  walking:
+    type: "walking"
+    distance: 50000
+    mode: sneaking
+display:
+  name: "&c50000ブロックしゃがみ移動"
+  lore-normal:
+    - "&c50000ブロックしゃがみ移動してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{walking:progress}&7/50000 しゃがみ移動完了"
+  type: "LEATHER_BOOTS"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} sneak3"
+placeholders:
+  description: "&f50000ブロック&7しゃがみ移動"
+  progress: " &8- &f{walking:progress}&7/50000 しゃがみ移動完了"
+progress-placeholders:
+  '*': "&f{walking:progress}&7/50000 しゃがみ移動完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "sneak2"
+  repeatable: false

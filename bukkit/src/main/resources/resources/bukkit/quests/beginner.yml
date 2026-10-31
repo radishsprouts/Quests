@@ -1,0 +1,60 @@
+tasks:
+  step0:
+    type: "blockbreak"
+    amount: 10
+    hostile: true
+    blocks:
+    - OAK_LOG
+    - SPRUCE_LOG
+    - BIRCH_LOG
+    - JUNGLE_LOG
+    - ACACIA_LOG
+    - DARK_OAK_LOG
+    - MANGROVE_LOG
+    - CHERRY_LOG
+  step1:
+    type: "crafting"
+    amount: 10
+    hostile: true
+    blocks:
+    - OAK_PLANKS
+    - SPRUCE_PLANKS
+    - BIRCH_PLANKS
+    - JUNGLE_PLANKS
+    - ACACIA_PLANKS
+    - DARK_OAK_PLANKS
+    - MANGROVE_PLANKS
+    - BAMBOO_PLANKS
+    - CHERRY_PLANKS
+    - CRIMSON_PLANKS
+    - WARPED_PLANKS
+display:
+  name: "&c初心者向けクエスト"
+  lore-normal:
+    - "&c木を切ってください。"
+    - "&c板材をクラフトしてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - 木を切る &f{step0:progress}&7/10 完了"
+    - "&7 - 板材をクラフトする &f{step1:progress}&7/10 完了"
+  type: "IRON_SWORD"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} beginner"
+placeholders:
+  description: "&7ウォーデンを&f100体&7討伐する"
+  progress: " &8- &f{step0:progress}&7/100 体討伐完了"
+progress-placeholders:
+  step0: "&7木を切る &f{step0:progress}&7/10 完了"
+  step1: "&7板材をクラフトする &f{step1:progress}&7/10 完了"
+options:
+  category: "通常クエスト"
+  repeatable: false
+  sort-order: 1
+  permission-required: true
+  gui-hide-quests-nopermission: true
+

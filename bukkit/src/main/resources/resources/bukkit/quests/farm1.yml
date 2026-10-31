@@ -1,0 +1,27 @@
+tasks:
+  farming:
+    type: "farming"
+    amount: 100
+display:
+  name: "&c作物を100個収穫する"
+  lore-normal:
+    - "&c作物を100個収穫してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{farming:progress}&7/100 個収穫完了"
+  type: "WHEAT"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} farm1"
+placeholders:
+  description: "&7作物を&f100個&7収穫する"
+  progress: " &8- &f{farming:progress}&7/100 個収穫完了"
+progress-placeholders:
+  '*': "&f{farming:progress}&7/100 個収穫完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

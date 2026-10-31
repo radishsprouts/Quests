@@ -1,0 +1,35 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 1500
+    hostile: true
+    mobs:
+    - PILLAGER
+    - VINDICATOR
+    - EVOKER
+    - RAVAGER
+display:
+  name: "&c襲撃者を1500体倒す"
+  lore-normal:
+    - "&c襲撃者を1500体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/1500 討伐完了"
+  type: "CROSSBOW"
+rewards:
+  - "eco give {player} 1500"
+  - "titlegrant {player} pillager3"
+placeholders:
+  description: "&7襲撃者を&f1500体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/1500 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/1500 討伐完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "pillager2"
+  repeatable: false

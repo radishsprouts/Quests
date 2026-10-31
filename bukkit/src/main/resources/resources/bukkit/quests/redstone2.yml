@@ -1,0 +1,44 @@
+tasks:
+  blockplace:
+    type: "blockplace"
+    amount: 1000
+    block:
+      - REDSTONE_WIRE
+      - REPEATER
+      - COMPARATOR
+      - REDSTONE_TORCH
+      - PISTON
+      - STICKY_PISTON
+      - OBSERVER
+      - DISPENSER
+      - DROPPER
+      - HOPPER
+      - REDSTONE_LAMP
+      - LEVER
+      - TRIPWIRE_HOOK
+      - TARGET
+display:
+  name: "&cレッドストーン装置を1000個設置"
+  lore-normal:
+    - "&cレッドストーン装置を1000個設置してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockplace:progress}&7/1000 ブロック完了"
+  type: "REDSTONE"
+rewards:
+  - "eco give {player} 500"
+  - "titlegrant {player} redstone2"
+placeholders:
+  description: "&7レッドストーン装置を&f1000個&7設置する"
+  progress: " &8- &f{blockplace:progress}&7/1000 ブロック完了"
+progress-placeholders:
+  '*': "&f{blockplace:progress}&7/1000 ブロック完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "redstone1"
+  repeatable: false

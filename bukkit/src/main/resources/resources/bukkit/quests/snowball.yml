@@ -1,0 +1,28 @@
+tasks:
+  projectilelaunching:
+    type: "projectilelaunching"
+    amount: 1000
+    projectile: 'SNOWBALL'
+display:
+  name: "&c雪玉を1000個投げる"
+  lore-normal:
+    - "&c雪玉を1000個投げてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{projectilelaunching:progress}&7/1000 個投擲完了"
+  type: "SNOWBALL"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} snowball"
+placeholders:
+  description: "&7雪玉を&f1000個&7投げる"
+  progress: " &8- &f{projectilelaunching:progress}&7/1000 個投擲完了"
+progress-placeholders:
+  '*': "&f{projectilelaunching:progress}&7/1000 個投擲完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

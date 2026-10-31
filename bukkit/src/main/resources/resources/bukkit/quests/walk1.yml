@@ -1,0 +1,29 @@
+tasks:
+  walking:
+    type: "walking"
+    distance: 5000
+    mode: running
+display:
+  name: "&c5000ブロックランニング"
+  lore-normal:
+    - "&c5000ブロック走ってください。歩きや乗り物はカウントされません。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{walking:progress}&7/5000 ランニング完了"
+  type: "IRON_BOOTS"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} walk1"
+placeholders:
+  description: "&f5000ブロック&7ランニング"
+  progress: " &8- &f{walking:progress}&7/5000 ランニング完了"
+progress-placeholders:
+  '*': "&f{walking:progress}&7/5000 ランニング完了"
+options:
+  category: "通常クエスト"
+  repeatable: false
+

@@ -1,0 +1,27 @@
+tasks:
+  composting:
+    type: "composting"
+    amount: 1000
+display:
+  name: "&cコンポスターで1000個堆肥にする"
+  lore-normal:
+    - "&cコンポスターにアイテムを1000個入れてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{composting:progress}&7/1000 個堆肥化完了"
+  type: "COMPOSTER"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} compost"
+placeholders:
+  description: "&7コンポスターで&f1000個&7堆肥にする"
+  progress: " &8- &f{composting:progress}&7/1000 個堆肥化完了"
+progress-placeholders:
+  '*': "&f{composting:progress}&7/1000 個堆肥化完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

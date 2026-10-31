@@ -1,0 +1,34 @@
+tasks:
+  blockbreak:
+    type: "blockbreak"
+    amount: 1000000
+    block:
+      - DIRT
+      - GRASS_BLOCK
+      - STONE
+display:
+  name: "&c土か草か石ブロックを1000000ブロック掘る"
+  lore-normal:
+    - "&c土か草か石ブロックを1000000ブロック掘ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockbreak:progress}&7/1000000 ブロック完了"
+  type: "DIRT"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} soil3"
+placeholders:
+  description: "&7土か草か石ブロックを&f1000000ブロック&7掘る"
+  progress: " &8- &f{blockbreak:progress}&7/1000000 ブロック完了"
+progress-placeholders:
+  '*': "&f{blockbreak:progress}&7/1000000 ブロック完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "soil2"
+  repeatable: false
+

@@ -1,0 +1,54 @@
+tasks:
+  consume:
+    type: "consume"
+    amount: 1000
+    items:
+    - APPLE
+    - BAKED_POTATO
+    - BEETROOT
+    - BEETROOT_SOUP
+    - BREAD
+    - CARROT
+    - CHORUS_FRUIT
+    - COOKED_BEEF
+    - COOKED_CHICKEN
+    - COOKED_COD
+    - COOKED_MUTTON
+    - COOKED_PORKCHOP
+    - COOKED_RABBIT
+    - COOKED_SALMON
+    - COOKIE
+    - DRIED_KELP
+    - GOLDEN_APPLE
+    - GOLDEN_CARROT
+    - HONEY_BOTTLE
+    - MELON_SLICE
+    - MUSHROOM_STEW
+    - PUMPKIN_PIE
+    - RABBIT_STEW
+    - SUSPICIOUS_STEW
+    - SWEET_BERRIES
+    - GLOW_BERRIES
+display:
+  name: "&c食べ物を1000個食べる"
+  lore-normal:
+    - "&c食べ物を1000個食べてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{consume:progress}&7/1000 個食事完了"
+  type: "COOKED_BEEF"
+rewards:
+  - "eco give {player} 500"
+  - "titlegrant {player} eat"
+placeholders:
+  description: "&7食べ物を&f1000個&7食べる"
+  progress: " &8- &f{consume:progress}&7/1000 個食事完了"
+progress-placeholders:
+  '*': "&f{consume:progress}&7/1000 個食事完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

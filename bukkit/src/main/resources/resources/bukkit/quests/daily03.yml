@@ -1,0 +1,31 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 15
+    hostile: true
+display:
+  name: "&c任意のモブを15体倒す"
+  lore-normal:
+    - "&cゾンビ、スケルトン、クリーパーなど、任意のモブを15体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/15 討伐完了"
+  type: "IRON_SWORD"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7任意のモブを&f15体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/15 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/15 討伐完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

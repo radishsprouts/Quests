@@ -1,0 +1,35 @@
+tasks:
+  fishing:
+    type: "fishing"
+    amount: 500
+    items:
+    - COD
+    - SALMON
+    - TROPICAL_FISH
+    - PUFFERFISH
+display:
+  name: "&c魚を500匹釣る"
+  lore-normal:
+    - "&c魚を500匹釣ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{fishing:progress}&7/500 匹釣り完了"
+  type: "FISHING_ROD"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} fisher2"
+placeholders:
+  description: "&7魚を&f500匹&7釣る"
+  progress: " &8- &f{fishing:progress}&7/500 匹釣り完了"
+progress-placeholders:
+  '*': "&f{fishing:progress}&7/500 匹釣り完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "fisher1"
+  repeatable: false
+

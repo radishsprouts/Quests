@@ -1,0 +1,35 @@
+tasks:
+  reach:
+    type: "placeholderapi_evaluate"
+    placeholder: "%kadorecipe_cook_total%"
+    operator: "GREATER_THAN_OR_EQUAL_TO"
+    evaluates: "50000"
+    refresh-ticks: 100
+display:
+  name: "&c料理を50000品作る"
+  lore-normal:
+    - "&cKadoRecipeの料理を通算50000品作ってください。"
+    - "&7条件を満たすと自動的に完了します。"
+    - ""
+    - "&7現在: &f%kadorecipe_cook_total%&7 / 50000 品"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f%kadorecipe_cook_total%&7 / 50000 品"
+  type: "COOKED_BEEF"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} cook4"
+placeholders:
+  description: "&7料理を50000品作る"
+  progress: " &8- &f/kadorecipe stats &7で作った品数を確認"
+progress-placeholders:
+  '*': "&f/kadorecipe stats &7で作った品数を確認"
+options:
+  category: "通常クエスト"
+  requires:
+    - "cook3"
+  repeatable: false

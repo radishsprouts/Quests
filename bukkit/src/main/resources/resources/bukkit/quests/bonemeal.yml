@@ -1,0 +1,27 @@
+tasks:
+  blockfertilizing:
+    type: "blockfertilizing"
+    amount: 1000
+display:
+  name: "&c骨粉を1000回使う"
+  lore-normal:
+    - "&c骨粉を1000回使ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockfertilizing:progress}&7/1000 回骨粉使用完了"
+  type: "BONE_MEAL"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} bonemeal"
+placeholders:
+  description: "&7骨粉を&f1000回&7使う"
+  progress: " &8- &f{blockfertilizing:progress}&7/1000 回骨粉使用完了"
+progress-placeholders:
+  '*': "&f{blockfertilizing:progress}&7/1000 回骨粉使用完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

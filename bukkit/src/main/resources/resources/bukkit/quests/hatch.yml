@@ -1,0 +1,27 @@
+tasks:
+  hatching:
+    type: "hatching"
+    amount: 100
+display:
+  name: "&c卵から100匹孵化させる"
+  lore-normal:
+    - "&c卵を投げて100匹孵化させてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{hatching:progress}&7/100 匹孵化完了"
+  type: "EGG"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} hatch"
+placeholders:
+  description: "&7卵から&f100匹&7孵化させる"
+  progress: " &8- &f{hatching:progress}&7/100 匹孵化完了"
+progress-placeholders:
+  '*': "&f{hatching:progress}&7/100 匹孵化完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

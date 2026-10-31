@@ -1,0 +1,44 @@
+tasks:
+  blockbreak:
+    type: "blockbreak"
+    amount: 10000
+    block:
+      - COAL_ORE
+      - DEEPSLATE_COAL_ORE
+      - IRON_ORE
+      - DEEPSLATE_IRON_ORE
+      - COPPER_ORE
+      - DEEPSLATE_COPPER_ORE
+      - GOLD_ORE
+      - DEEPSLATE_GOLD_ORE
+      - REDSTONE_ORE
+      - DEEPSLATE_REDSTONE_ORE
+      - LAPIS_ORE
+      - DEEPSLATE_LAPIS_ORE
+      - NETHER_GOLD_ORE
+      - NETHER_QUARTZ_ORE
+display:
+  name: "&c鉱石を10000個採掘"
+  lore-normal:
+    - "&c鉱石を10000個採掘してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockbreak:progress}&7/10000 ブロック完了"
+  type: "IRON_PICKAXE"
+rewards:
+  - "eco give {player} 1500"
+  - "titlegrant {player} ore3"
+placeholders:
+  description: "&7鉱石を&f10000個&7採掘する"
+  progress: " &8- &f{blockbreak:progress}&7/10000 ブロック完了"
+progress-placeholders:
+  '*': "&f{blockbreak:progress}&7/10000 ブロック完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "ore2"
+  repeatable: false

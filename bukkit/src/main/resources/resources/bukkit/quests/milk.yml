@@ -1,0 +1,27 @@
+tasks:
+  milking:
+    type: "milking"
+    amount: 100
+display:
+  name: "&c牛から100回ミルクを搾る"
+  lore-normal:
+    - "&c牛から100回ミルクを搾ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{milking:progress}&7/100 回搾乳完了"
+  type: "MILK_BUCKET"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} milk"
+placeholders:
+  description: "&7牛から&f100回&7ミルクを搾る"
+  progress: " &8- &f{milking:progress}&7/100 回搾乳完了"
+progress-placeholders:
+  '*': "&f{milking:progress}&7/100 回搾乳完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

@@ -1,0 +1,32 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 100
+    hostile: true
+    mob: ZOMBIE
+display:
+  name: "&cゾンビを100体倒す"
+  lore-normal:
+    - "&cゾンビを100体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/100 討伐完了"
+  type: "IRON_SWORD"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} zombie100"
+placeholders:
+  description: "&7ゾンビを&f100体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/100 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/100 討伐完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "zombie1"
+  repeatable: false
+

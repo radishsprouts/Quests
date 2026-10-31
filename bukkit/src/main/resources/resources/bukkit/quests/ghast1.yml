@@ -1,0 +1,28 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 5
+    mob: GHAST
+display:
+  name: "&cガストを5体倒す"
+  lore-normal:
+    - "&cガストを5体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/5 討伐完了"
+  type: "GHAST_TEAR"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} ghast1"
+placeholders:
+  description: "&7ガストを&f5体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/5 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/5 討伐完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

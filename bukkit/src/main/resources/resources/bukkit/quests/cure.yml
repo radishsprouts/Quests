@@ -1,0 +1,27 @@
+tasks:
+  curing:
+    type: "curing"
+    amount: 10
+display:
+  name: "&cゾンビ村人を10人治療する"
+  lore-normal:
+    - "&cゾンビ村人を10人治療してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{curing:progress}&7/10 人治療完了"
+  type: "GOLDEN_APPLE"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} cure"
+placeholders:
+  description: "&7ゾンビ村人を&f10人&7治療する"
+  progress: " &8- &f{curing:progress}&7/10 人治療完了"
+progress-placeholders:
+  '*': "&f{curing:progress}&7/10 人治療完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

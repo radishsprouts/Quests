@@ -1,0 +1,31 @@
+tasks:
+  playtime:
+    type: "playtime"
+    minutes: 60
+    ignore-afk: false
+display:
+  name: "&cマインクラフトを60分遊ぶ"
+  lore-normal:
+    - "&cマインクラフトを60分遊ぶ。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{playtime:progress}&7/60 分プレイ完了"
+  type: "IRON_INGOT"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7マインクラフトを&f60分&7遊ぶ"
+  progress: " &8- &f{playtime:progress}&7/15 分プレイ完了"
+progress-placeholders:
+  '*': "&f{playtime:progress}&7/60 分プレイ完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

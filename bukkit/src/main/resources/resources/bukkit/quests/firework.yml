@@ -1,0 +1,29 @@
+tasks:
+  crafting:
+    type: "crafting"
+    amount: 256
+    items:
+    - FIREWORK_ROCKET
+display:
+  name: "&c花火ロケットを256個作る"
+  lore-normal:
+    - "&c花火ロケットを256個クラフトしてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{crafting:progress}&7/256 個クラフト完了"
+  type: "FIREWORK_ROCKET"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} firework"
+placeholders:
+  description: "&7花火ロケットを&f256個&7作る"
+  progress: " &8- &f{crafting:progress}&7/256 個クラフト完了"
+progress-placeholders:
+  '*': "&f{crafting:progress}&7/256 個クラフト完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

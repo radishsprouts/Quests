@@ -1,0 +1,27 @@
+tasks:
+  shearing:
+    type: "shearing"
+    amount: 500
+display:
+  name: "&c羊を500匹刈る"
+  lore-normal:
+    - "&c羊を500匹刈ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{shearing:progress}&7/500 匹毛刈り完了"
+  type: "SHEARS"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} shear"
+placeholders:
+  description: "&7羊を&f500匹&7刈る"
+  progress: " &8- &f{shearing:progress}&7/500 匹毛刈り完了"
+progress-placeholders:
+  '*': "&f{shearing:progress}&7/500 匹毛刈り完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

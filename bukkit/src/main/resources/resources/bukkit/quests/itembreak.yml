@@ -1,0 +1,27 @@
+tasks:
+  itembreaking:
+    type: "itembreaking"
+    amount: 50
+display:
+  name: "&c道具を50個壊す"
+  lore-normal:
+    - "&c耐久が尽きるまで道具を50個使い切ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{itembreaking:progress}&7/50 個破壊完了"
+  type: "DAMAGED_ANVIL"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} itembreak"
+placeholders:
+  description: "&7道具を&f50個&7壊す"
+  progress: " &8- &f{itembreaking:progress}&7/50 個破壊完了"
+progress-placeholders:
+  '*': "&f{itembreaking:progress}&7/50 個破壊完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

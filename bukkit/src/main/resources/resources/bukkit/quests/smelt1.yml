@@ -1,0 +1,27 @@
+tasks:
+  smelting:
+    type: "smelting"
+    amount: 100
+display:
+  name: "&cアイテムを100個精錬する"
+  lore-normal:
+    - "&cかまどでアイテムを100個精錬してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{smelting:progress}&7/100 個精錬完了"
+  type: "FURNACE"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} smelt1"
+placeholders:
+  description: "&7アイテムを&f100個&7精錬する"
+  progress: " &8- &f{smelting:progress}&7/100 個精錬完了"
+progress-placeholders:
+  '*': "&f{smelting:progress}&7/100 個精錬完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

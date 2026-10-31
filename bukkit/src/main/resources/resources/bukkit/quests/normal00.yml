@@ -1,0 +1,28 @@
+tasks:
+  voting:
+    type: "votingplugin_vote"
+    amount: 10
+display:
+  name: "&c投票を１０回行う"
+  lore-normal:
+    - "&cランキングサイトで投票を１０回行ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f5000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{voting:progress}&7/10 投票完了"
+  type: "GRASS_BLOCK"
+rewards:
+  - "eco give {player} 5000"
+  - "titlegrant {player} voter"
+placeholders:
+  description: "&7ランキングサイトで投票を&f10個&7行う"
+  progress: " &8- &f{voting:progress}&7/10 投票完了"
+progress-placeholders:
+  '*': "&f{voting:progress}&7/10 投票完了"
+options:
+  category: "通常クエスト"
+  repeatable: false
+

@@ -1,0 +1,28 @@
+tasks:
+  walking:
+    type: "walking"
+    distance: 5000
+    mode: horse
+display:
+  name: "&c5000ブロック馬で移動"
+  lore-normal:
+    - "&c5000ブロック馬で移動してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{walking:progress}&7/5000 馬で移動完了"
+  type: "SADDLE"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} horse1"
+placeholders:
+  description: "&f5000ブロック&7馬で移動"
+  progress: " &8- &f{walking:progress}&7/5000 馬で移動完了"
+progress-placeholders:
+  '*': "&f{walking:progress}&7/5000 馬で移動完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

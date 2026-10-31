@@ -1,0 +1,31 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 6000
+    hostile: true
+    mob: CREEPER
+display:
+  name: "&cクリーパーを6000体倒す"
+  lore-normal:
+    - "&cクリーパーを6000体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/6000 討伐完了"
+  type: "CREEPER_HEAD"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} creeper4"
+placeholders:
+  description: "&7クリーパーを&f6000体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/6000 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/6000 討伐完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "creeper3"
+  repeatable: false

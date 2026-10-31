@@ -1,0 +1,29 @@
+tasks:
+  brewing:
+    type: "brewing"
+    amount: 100
+display:
+  name: "&cポーションを100本醸造する"
+  lore-normal:
+    - "&cポーションを100本醸造してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f500&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{brewing:progress}&7/100 本醸造完了"
+  type: "BREWING_STAND"
+rewards:
+  - "eco give {player} 500"
+  - "titlegrant {player} brew2"
+placeholders:
+  description: "&7ポーションを&f100本&7醸造する"
+  progress: " &8- &f{brewing:progress}&7/100 本醸造完了"
+progress-placeholders:
+  '*': "&f{brewing:progress}&7/100 本醸造完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "brew1"
+  repeatable: false

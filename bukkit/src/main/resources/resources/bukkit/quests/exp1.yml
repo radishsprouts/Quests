@@ -1,0 +1,27 @@
+tasks:
+  expearn:
+    type: "expearn"
+    amount: 1000
+display:
+  name: "&c経験値を1000獲得する"
+  lore-normal:
+    - "&c経験値を1000獲得してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{expearn:progress}&7/1000 経験値獲得完了"
+  type: "EXPERIENCE_BOTTLE"
+rewards:
+  - "eco give {player} 100"
+  - "titlegrant {player} exp1"
+placeholders:
+  description: "&7経験値を&f1000&7獲得する"
+  progress: " &8- &f{expearn:progress}&7/1000 経験値獲得完了"
+progress-placeholders:
+  '*': "&f{expearn:progress}&7/1000 経験値獲得完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

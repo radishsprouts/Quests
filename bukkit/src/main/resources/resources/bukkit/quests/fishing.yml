@@ -1,0 +1,35 @@
+tasks:
+  fishing:
+    type: "fishing"
+    amount: 15
+    items:
+    - COD
+    - SALMON
+    - TROPICAL_FISH
+    - PUFFERFISH
+display:
+  name: "&c魚を15匹釣る"
+  lore-normal:
+    - "&c魚を15匹釣ってください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{fishing:progress}&7/15 匹釣り完了"
+  type: "FISHING_ROD"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7魚を&f15匹&7釣る"
+  progress: " &8- &f{fishing:progress}&7/15 匹釣り完了"
+progress-placeholders:
+  '*': "&f{fishing:progress}&7/15 匹釣り完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

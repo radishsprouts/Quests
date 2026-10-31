@@ -1,0 +1,30 @@
+tasks:
+  walking:
+    type: "walking"
+    distance: 600000
+    mode: boat
+display:
+  name: "&c600000ブロックボートで移動"
+  lore-normal:
+    - "&c600000ブロックボートで移動してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{walking:progress}&7/600000 ボートで移動完了"
+  type: "OAK_BOAT"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} boat4"
+placeholders:
+  description: "&f600000ブロック&7ボートで移動"
+  progress: " &8- &f{walking:progress}&7/600000 ボートで移動完了"
+progress-placeholders:
+  '*': "&f{walking:progress}&7/600000 ボートで移動完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "boat3"
+  repeatable: false

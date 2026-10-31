@@ -1,0 +1,30 @@
+tasks:
+  mining:
+    type: "blockbreak"
+    amount: 50
+display:
+  name: "&c任意のブロックを50個破壊"
+  lore-normal:
+    - "&c土、木、石など、任意のブロックを50個破壊してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mining:progress}&7/50 破壊完了"
+  type: "GRASS_BLOCK"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&7任意のブロックを&f50個&7破壊する"
+  progress: " &8- &f{mining:progress}&7/50 破壊完了"
+progress-placeholders:
+  '*': "&f{mining:progress}&7/50 破壊完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

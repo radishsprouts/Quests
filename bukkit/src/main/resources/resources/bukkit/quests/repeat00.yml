@@ -1,0 +1,31 @@
+tasks:
+  running:
+    type: "walking"
+    distance: 2000
+    mode: running
+display:
+  name: "&c2000ブロックランニング"
+  lore-normal:
+    - "&c2000ブロック走ってください。歩きや乗り物はカウントされません。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f100&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{running:progress}&7/2000 ランニング完了"
+  type: "IRON_BOOTS"
+rewards:
+  - "eco give {player} 100"
+placeholders:
+  description: "&f2000ブロック&7ランニング"
+  progress: " &8- &f{running:progress}&7/2000 ランニング"
+progress-placeholders:
+  '*': "&f{running:progress}&7/2000 ランニング完了"
+options:
+  category: "デイリークエスト"
+  repeatable: true
+  cooldown:
+    enabled: true
+    time: 1440
+

@@ -1,0 +1,27 @@
+tasks:
+  smithing:
+    type: "smithing"
+    amount: 10
+display:
+  name: "&c鍛冶台で10個加工する"
+  lore-normal:
+    - "&c鍛冶台でアイテムを10個加工してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{smithing:progress}&7/10 個鍛冶完了"
+  type: "SMITHING_TABLE"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} smith"
+placeholders:
+  description: "&7鍛冶台で&f10個&7加工する"
+  progress: " &8- &f{smithing:progress}&7/10 個鍛冶完了"
+progress-placeholders:
+  '*': "&f{smithing:progress}&7/10 個鍛冶完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

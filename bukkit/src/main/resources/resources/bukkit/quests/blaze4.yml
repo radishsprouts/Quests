@@ -1,0 +1,31 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 3000
+    hostile: true
+    mob: BLAZE
+display:
+  name: "&cブレイズを3000体倒す"
+  lore-normal:
+    - "&cブレイズを3000体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/3000 討伐完了"
+  type: "BLAZE_ROD"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} blaze4"
+placeholders:
+  description: "&7ブレイズを&f3000体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/3000 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/3000 討伐完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "blaze3"
+  repeatable: false

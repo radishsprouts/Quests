@@ -1,0 +1,30 @@
+tasks:
+  blockbreak:
+    type: "blockbreak"
+    amount: 10
+    block:
+      - DIAMOND_ORE
+      - DEEPSLATE_DIAMOND_ORE
+display:
+  name: "&cダイヤモンド鉱石を10個採掘"
+  lore-normal:
+    - "&cダイヤモンド鉱石を10個採掘してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{blockbreak:progress}&7/10 ブロック完了"
+  type: "DIAMOND"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} diamond1"
+placeholders:
+  description: "&7ダイヤモンド鉱石を&f10個&7採掘する"
+  progress: " &8- &f{blockbreak:progress}&7/10 ブロック完了"
+progress-placeholders:
+  '*': "&f{blockbreak:progress}&7/10 ブロック完了"
+options:
+  category: "通常クエスト"
+  repeatable: false

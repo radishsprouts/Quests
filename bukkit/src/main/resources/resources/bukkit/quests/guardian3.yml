@@ -1,0 +1,33 @@
+tasks:
+  mobkilling:
+    type: "mobkilling"
+    amount: 1000
+    hostile: true
+    mobs:
+    - GUARDIAN
+    - ELDER_GUARDIAN
+display:
+  name: "&cガーディアンを1000体倒す"
+  lore-normal:
+    - "&cガーディアンを1000体討伐してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f1000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{mobkilling:progress}&7/1000 討伐完了"
+  type: "PRISMARINE_SHARD"
+rewards:
+  - "eco give {player} 1000"
+  - "titlegrant {player} guardian3"
+placeholders:
+  description: "&7ガーディアンを&f1000体&7討伐する"
+  progress: " &8- &f{mobkilling:progress}&7/1000 討伐完了"
+progress-placeholders:
+  '*': "&f{mobkilling:progress}&7/1000 討伐完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "guardian2"
+  repeatable: false

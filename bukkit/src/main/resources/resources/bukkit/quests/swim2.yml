@@ -1,0 +1,30 @@
+tasks:
+  walking:
+    type: "walking"
+    distance: 25000
+    mode: swimming
+display:
+  name: "&c25000ブロック泳いで移動"
+  lore-normal:
+    - "&c25000ブロック泳いで移動してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f300&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{walking:progress}&7/25000 泳いで移動完了"
+  type: "WATER_BUCKET"
+rewards:
+  - "eco give {player} 300"
+  - "titlegrant {player} swim2"
+placeholders:
+  description: "&f25000ブロック&7泳いで移動"
+  progress: " &8- &f{walking:progress}&7/25000 泳いで移動完了"
+progress-placeholders:
+  '*': "&f{walking:progress}&7/25000 泳いで移動完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "swim1"
+  repeatable: false

@@ -1,0 +1,29 @@
+tasks:
+  crafting:
+    type: "crafting"
+    amount: 50000
+display:
+  name: "&cアイテムを50000個クラフトする"
+  lore-normal:
+    - "&cアイテムを50000個クラフトしてください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f3000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{crafting:progress}&7/50000 個クラフト完了"
+  type: "CRAFTING_TABLE"
+rewards:
+  - "eco give {player} 3000"
+  - "titlegrant {player} craft4"
+placeholders:
+  description: "&7アイテムを&f50000個&7クラフトする"
+  progress: " &8- &f{crafting:progress}&7/50000 個クラフト完了"
+progress-placeholders:
+  '*': "&f{crafting:progress}&7/50000 個クラフト完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "craft3"
+  repeatable: false

@@ -1,0 +1,29 @@
+tasks:
+  farming:
+    type: "farming"
+    amount: 50000
+display:
+  name: "&c作物を50000個収穫する"
+  lore-normal:
+    - "&c作物を50000個収穫してください。"
+    - ""
+    - "&7報酬:"
+    - "&7 - &f5000&7ポイント"
+  lore-started:
+    - ""
+    - "&7現在の進行状況:"
+    - "&7 - &f{farming:progress}&7/50000 個収穫完了"
+  type: "WHEAT"
+rewards:
+  - "eco give {player} 5000"
+  - "titlegrant {player} farm4"
+placeholders:
+  description: "&7作物を&f50000個&7収穫する"
+  progress: " &8- &f{farming:progress}&7/50000 個収穫完了"
+progress-placeholders:
+  '*': "&f{farming:progress}&7/50000 個収穫完了"
+options:
+  category: "通常クエスト"
+  requires:
+    - "farm3"
+  repeatable: false
