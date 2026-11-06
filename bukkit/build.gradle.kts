@@ -4,6 +4,10 @@ plugins {
     id("com.gradleup.shadow")
 }
 
+base {
+    archivesName.set("Quests")
+}
+
 tasks.build {
     dependsOn.add(tasks.shadowJar)
 }
@@ -72,7 +76,7 @@ repositories {
 
 dependencies {
     // Quests common module
-    compileOnlyProject(":common")
+    implementation(project(":common"))
 
     // Paper
     compileOnlyServer("io.papermc.paper:paper-api:26.1.1.build.29-alpha")
@@ -163,7 +167,13 @@ dependencies {
     implementation("net.md-5:bungeecord-chat:1.21-R0.4") { isTransitive = false }
 }
 
+tasks.jar {
+    archiveBaseName.set("Quests")
+    archiveClassifier.set("unshaded")
+}
+
 tasks.shadowJar {
+    archiveBaseName.set("Quests")
     exclude("mojang-translations/*")
 
     relocate("org.bstats", "com.leonardobishop.quests.libs.bstats")

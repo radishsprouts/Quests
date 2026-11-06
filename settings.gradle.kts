@@ -13,5 +13,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "quests"
+rootProject.name = "Quests"
 include("common", "bukkit")

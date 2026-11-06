@@ -14,16 +14,20 @@ import com.leonardobishop.quests.common.quest.Task;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.jspecify.annotations.NonNull;
 
 import java.util.Arrays;
-import java.util.WeakHashMap;
+import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class PlaceholderAPIEvaluateTaskType extends BukkitTaskType {
 
     private final BukkitQuestsPlugin plugin;
-    private final WeakHashMap<Player, WeakHashMap<Task, Integer>> refreshTicksMap = new WeakHashMap<>();
+    private final Map<UUID, Map<Task, Long>> refreshTimeMap = new ConcurrentHashMap<>();
     private WrappedTask poll;
 
     public PlaceholderAPIEvaluateTaskType(BukkitQuestsPlugin plugin) {
@@ -64,7 +68,7 @@ public final class PlaceholderAPIEvaluateTaskType extends BukkitTaskType {
             @Override
             public void run() {
                 for (Player player : Bukkit.getOnlinePlayers()) {
-                    handle(player);
+                    plugin.getScheduler().runTaskAtEntity(player, () -> handle(player));
                 }
             }
         }.runTaskTimer(plugin.getScheduler(), refreshTicks, refreshTicks);
@@ -89,21 +93,22 @@ public final class PlaceholderAPIEvaluateTaskType extends BukkitTaskType {
 
             Integer refreshTicks = (Integer) task.getConfigValue("refresh-ticks");
             if (refreshTicks != null) {
-                int currentTick = Bukkit.getCurrentTick();
+                long currentMillis = System.currentTimeMillis();
+                long refreshIntervalMillis = refreshTicks * 50L;
 
-                WeakHashMap<Task, Integer> playerRefreshTicksMap = refreshTicksMap.computeIfAbsent(player, k -> new WeakHashMap<>());
-                Integer lastRefreshTicks = playerRefreshTicksMap.get(task);
+                Map<Task, Long> playerRefreshTimeMap = refreshTimeMap.computeIfAbsent(player.getUniqueId(), k -> new ConcurrentHashMap<>());
+                Long lastRefreshMillis = playerRefreshTimeMap.get(task);
 
-                if (lastRefreshTicks != null) {
-                    int ticksSinceLastRefresh = currentTick - lastRefreshTicks;
+                if (lastRefreshMillis != null) {
+                    long elapsed = currentMillis - lastRefreshMillis;
 
-                    if (ticksSinceLastRefresh < refreshTicks) {
-                        super.debug("Ticks since last refresh are lower than specified, continuing...", quest.getId(), task.getId(), player.getUniqueId());
+                    if (elapsed < refreshIntervalMillis) {
+                        super.debug("Time since last refresh is lower than specified, continuing...", quest.getId(), task.getId(), player.getUniqueId());
                         continue;
                     }
                 }
 
-                playerRefreshTicksMap.put(task, currentTick);
+                playerRefreshTimeMap.put(task, currentMillis);
             }
 
             String placeholder = (String) task.getConfigValue("placeholder");
@@ -187,11 +192,17 @@ public final class PlaceholderAPIEvaluateTaskType extends BukkitTaskType {
         return future;
     }
 
+    @EventHandler
+    public void onPlayerQuit(PlayerQuitEvent event) {
+        refreshTimeMap.remove(event.getPlayer().getUniqueId());
+    }
+
     @Override
     public void onDisable() {
         if (this.poll != null) {
             this.poll.cancel();
         }
+        this.refreshTimeMap.clear();
     }
 
     private enum Operator {

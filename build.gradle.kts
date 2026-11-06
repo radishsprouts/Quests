@@ -39,30 +39,6 @@ subprojects {
 
 defaultTasks = mutableListOf("clean", "allJar")
 
-tasks.register<Jar>("allJar") {
-    subprojects {
-        dependsOn.add(tasks.build)
-    }
-
-    if (project.findProperty("gitversion") == null || project.findProperty("gitversion") == "true") {
-        val gitCommitHash = gitCommitHash()
-
-        allprojects {
-            version = "${version}-${gitCommitHash}"
-        }
-    }
-
-    subprojects {
-        configurations.archives {
-            allArtifacts.files.forEach {
-                from(zipTree(it))
-            }
-        }
-    }
-
-    archiveBaseName = "Quests"
-}
-
 fun gitCommitHash(): String {
     val execOutput = providers.exec {
         commandLine = "git rev-parse --verify --short HEAD".split(" ")
@@ -72,6 +48,29 @@ fun gitCommitHash(): String {
     val gitCommitHashString = gitCommitHashProvider.getOrElse("unknown")
 
     return gitCommitHashString.trim()
+}
+
+if (project.findProperty("gitversion") == null || project.findProperty("gitversion") == "true") {
+    val hash = gitCommitHash()
+    allprojects {
+        version = "${version}-${hash}"
+    }
+}
+
+tasks.jar {
+    enabled = false
+}
+
+tasks.register<Jar>("allJar") {
+    dependsOn(":bukkit:shadowJar")
+    archiveBaseName.set("Quests")
+}
+
+gradle.projectsEvaluated {
+    tasks.named<Jar>("allJar") {
+        val shadowJarTask = project(":bukkit").tasks.named("shadowJar")
+        from(shadowJarTask.map { zipTree(it.outputs.files.singleFile) })
+    }
 }
 
 val javaVersions = listOf(
