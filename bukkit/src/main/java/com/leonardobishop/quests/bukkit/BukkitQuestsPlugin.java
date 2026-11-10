@@ -762,7 +762,7 @@ public class BukkitQuestsPlugin extends JavaPlugin implements Quests {
 
             for (String name : examples) {
                 File file = new File(this.getDataFolder() + File.separator + "quests" + File.separator + name);
-                writeResourceToFile("resources/bukkit/quests/" + name, file);
+                writeResourceToFile("resources/bukkit/quests.example/" + name, file);
             }
         }
 
@@ -774,6 +774,10 @@ public class BukkitQuestsPlugin extends JavaPlugin implements Quests {
 
     public void writeResourceToFile(String resource, File file) {
         try {
+            if (BukkitQuestsPlugin.class.getClassLoader().getResource(resource) == null) {
+                this.getQuestsLogger().warning("Resource '" + resource + "' was not found in the plugin jar, skipping " + file.getName());
+                return;
+            }
             file.createNewFile();
             try (InputStream in = BukkitQuestsPlugin.class.getClassLoader().getResourceAsStream(resource);
                  OutputStream out = new FileOutputStream(file)) {

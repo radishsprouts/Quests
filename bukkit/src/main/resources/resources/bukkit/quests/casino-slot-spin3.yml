@@ -31,5 +31,5 @@ progress-placeholders:
 options:
   category: "通常クエスト"
   requires:
-    - "casino_slot_spin2"
+    - "casino-slot-spin2"
   repeatable: false

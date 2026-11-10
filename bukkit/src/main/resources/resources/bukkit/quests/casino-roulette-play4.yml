@@ -31,5 +31,5 @@ progress-placeholders:
 options:
   category: "通常クエスト"
   requires:
-    - "casino_roulette_play3"
+    - "casino-roulette-play3"
   repeatable: false

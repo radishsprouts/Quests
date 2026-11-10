@@ -31,5 +31,5 @@ progress-placeholders:
 options:
   category: "通常クエスト"
   requires:
-    - "casino_baccarat_play2"
+    - "casino-baccarat-play2"
   repeatable: false

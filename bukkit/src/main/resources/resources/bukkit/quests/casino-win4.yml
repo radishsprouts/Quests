@@ -3,33 +3,33 @@ tasks:
     type: "placeholderapi_evaluate"
     placeholder: "%kadocasino_win_total%"
     operator: "GREATER_THAN_OR_EQUAL_TO"
-    evaluates: "1000000"
+    evaluates: "10000000"
     refresh-ticks: 100
 display:
-  name: "&cカジノで累計1000000円獲得する"
+  name: "&cカジノで累計10000000円獲得する"
   lore-normal:
-    - "&cカジノの配当金を通算1000000円獲得してください。"
+    - "&cカジノの配当金を通算10000000円獲得してください。"
     - "&7条件を満たすと自動的に完了します。"
     - ""
-    - "&7現在: &f%kadocasino_win_total%&7 / 1000000 円"
+    - "&7現在: &f%kadocasino_win_total%&7 / 10000000 円"
     - ""
     - "&7報酬:"
-    - "&7 - &f1000&7ポイント"
+    - "&7 - &f3000&7ポイント"
   lore-started:
     - ""
     - "&7現在の進行状況:"
-    - "&7 - &f%kadocasino_win_total%&7 / 1000000 円"
+    - "&7 - &f%kadocasino_win_total%&7 / 10000000 円"
   type: "EMERALD"
 rewards:
-  - "eco give {player} 1000"
-  - "titlegrant {player} casino_win3"
+  - "eco give {player} 3000"
+  - "titlegrant {player} casino_win4"
 placeholders:
-  description: "&7カジノで累計1000000円獲得する"
+  description: "&7カジノで累計10000000円獲得する"
   progress: " &8- &7進行中"
 progress-placeholders:
-  '*': "&f%kadocasino_win_total%&7 / 1000000 円"
+  '*': "&f%kadocasino_win_total%&7 / 10000000 円"
 options:
   category: "通常クエスト"
   requires:
-    - "casino_win2"
+    - "casino-win3"
   repeatable: false

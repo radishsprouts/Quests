@@ -31,5 +31,5 @@ progress-placeholders:
 options:
   category: "通常クエスト"
   requires:
-    - "brewery_cafe2"
+    - "brewery-cafe2"
   repeatable: false
